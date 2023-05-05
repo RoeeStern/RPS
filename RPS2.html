@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rock-Paper-scissors2</title>
+    <style>
+      .but {
+        background-color: black;
+        color: yellow;
+        border-radius: 100px;
+        height: 100px;
+        width: 100px;
+      }
+      .imge {
+        height: 80px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Rock Paper Scissors Game2</p>
+    <button
+      class="but"
+      onclick="console.log()
+    palyer='Rock'; pcPick();"
+    >
+      Rock
+    </button>
+
+    <button class="but" onclick="palyer='Paper'; pcPick();">Paper</button>
+
+    <button
+      class="but"
+      onclick="palyer='Scissors';
+        pcPick();"
+    >
+      Scissors
+    </button>
+    <script>
+      let palyer;
+      let pc;
+
+      function pcPick() {
+        pc = Math.random();
+        let array = ["Rock", "Paper", "Scissors"];
+        let index = Math.floor(Math.random() * 3);
+        pc = array[index];
+
+        if (pc === palyer)
+          alert("You picket Scissors the computer picket Scissors resalt: Tie");
+        else if (pc == "Rock" && palyer == "Scissors")
+          alert(
+            "You picket Scissors the computer picket Rock resalt: You lose"
+          );
+        else if (pc == "Paper" && palyer == "Rock")
+          alert("You picket Rock the computer picket Paper resalt: You lose");
+        else if (pc == "Scissors" && palyer == "Paper")
+          alert(
+            "You picket Paper the computer apicket Scissors resalt: You lose"
+          );
+        else
+          alert(
+            "you picket " +
+              palyer +
+              " the computer picket " +
+              pc +
+              " resalt: you win"
+          );
+      }
+    </script>
+  </body>
+</html>
